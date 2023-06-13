@@ -1,0 +1,12 @@
+@use "./sass/variables" as *;
+
+.app {
+  width: 100%;
+  height: 100%;
+
+  // Default background color
+  background-color: $color-base-dark-theme-surface;
+
+  // Default color
+  color: $color-typography-87;
+}

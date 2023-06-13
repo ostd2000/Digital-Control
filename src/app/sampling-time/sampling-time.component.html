@@ -1,0 +1,18 @@
+<div class="sampling-time">
+  <h1 class="sampling-time__title">Sampling Time</h1>
+
+  <div class="sampling-time__c1">
+    <app-horizontal-select
+      [num]="3"
+      [data]="['1 ms', '10 ms', '100 ms']"
+      (selectedItem)="handleSelect($event)"
+    ></app-horizontal-select>
+
+    <app-input
+      [generalStyles]="{ alignItems: 'center' }"
+      [inputStyles]="{ width: '8rem' }"
+      (inputValue)="handleInput($event)"
+      >Specify an arbitrary value</app-input
+    >
+  </div>
+</div>

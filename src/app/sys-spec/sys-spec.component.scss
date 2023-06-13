@@ -1,0 +1,55 @@
+@use "../sass/variables" as *;
+
+.sys-spec {
+  width: 63rem;
+  height: 33rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $color-surface-5;
+
+  border: 2px solid $color-surface-7;
+  border-radius: $border-radius-8;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+
+    margin-top: 1.5rem;
+  }
+
+  &__c1 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 1.5rem;
+  }
+
+  &__c2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    align-self: flex-start;
+
+    margin-top: 3rem;
+    margin-left: 2rem;
+  }
+
+  &__subtitle1,
+  &__subtitle2 {
+    align-self: flex-start;
+
+    color: $color-typography-60;
+  }
+
+  &__subtitle1 {
+    margin-left: 2rem;
+  }
+}

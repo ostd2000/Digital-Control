@@ -1,0 +1,62 @@
+<div class="sys-rep">
+  <div class="sys-rep__c1">
+    <app-input-sinal-icon
+      [type]="inputSignal"
+      [dim]="'2.2rem'"
+      [backgroundColor]="'#1e2a33'"
+      [color]="'#2196F3'"
+    ></app-input-sinal-icon>
+
+    <app-arrow-line
+      [direction]="'right'"
+      [length]="'8rem'"
+      [color]="'#2A2A2A'"
+      [stroke]="'2px'"
+    ></app-arrow-line>
+
+    <app-sum></app-sum>
+
+    <app-arrow-line
+      [direction]="'right'"
+      [length]="'8rem'"
+      [color]="'#2A2A2A'"
+      [stroke]="'2px'"
+    ></app-arrow-line>
+
+    <div class="sys-rep__controller">Controller</div>
+
+    <app-arrow-line
+      [direction]="'right'"
+      [length]="'8rem'"
+      [color]="'#2A2A2A'"
+      [stroke]="'2px'"
+    ></app-arrow-line>
+
+    <app-transfer-func
+      id="sys-rep__transfer-func"
+      [numerator]="numerator"
+      [denominator]="denominator"
+    ></app-transfer-func>
+
+    <app-arrow-line
+      [direction]="'right'"
+      [length]="'8rem'"
+      [color]="'#2A2A2A'"
+      [stroke]="'2px'"
+    ></app-arrow-line>
+  </div>
+
+  <div
+    *ngIf="sysType == 'Closed Loop'"
+    class="sys-rep__c2"
+    [ngStyle]="sysRepC2Styles"
+  >
+    <span class="sys-rep__arrow-up material-symbols-rounded">
+      expand_less
+    </span>
+
+    <span class="sys-rep__line1"></span>
+    <span class="sys-rep__line2"></span>
+    <span class="sys-rep__line3"></span>
+  </div>
+</div>

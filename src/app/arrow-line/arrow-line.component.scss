@@ -1,0 +1,9 @@
+.arrow-line {
+  display: flex;
+  align-items: center;
+
+  &__line {
+    position: relative;
+    left: 1.3rem;
+  }
+}

@@ -1,0 +1,36 @@
+<div class="sys-spec">
+  <h1 class="sys-spec__title">System Specification</h1>
+
+  <div class="sys-spec__c1">
+    <h2 class="sys-spec__subtitle1">System Transfer Function</h2>
+
+    <app-input
+      [placeHolder]="'[1]'"
+      [ngStyle]="{ width: '100%' }"
+      [generalStyles]="{ gap: '3px', marginLeft: '2rem', marginTop: '1rem' }"
+      [labelStyles]="{ fontSize: '1.4rem', color: '#6C6C6C' }"
+      (inputValue)="handleNumerator($event)"
+      >Numerator Coefficients</app-input
+    >
+
+    <app-input
+      [placeHolder]="'[1 0.5]'"
+      [ngStyle]="{ width: '100%' }"
+      [generalStyles]="{ gap: '3px', marginLeft: '2rem', marginTop: '1rem' }"
+      [labelStyles]="{ fontSize: '1.4rem', color: '#6C6C6C' }"
+      (inputValue)="handleDenominator($event)"
+      >Denominator Coefficients</app-input
+    >
+  </div>
+
+  <div class="sys-spec__c2">
+    <h2 class="sys-spec__subtitle2">System Type</h2>
+
+    <app-horizontal-select
+      (selectedItem)="handleSelect($event)"
+      [num]="2"
+      [data]="['Open Loop', 'Closed Loop']"
+      [sm]="true"
+    ></app-horizontal-select>
+  </div>
+</div>

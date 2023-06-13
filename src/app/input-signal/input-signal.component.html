@@ -1,0 +1,24 @@
+<div class="input-signal">
+  <h1 class="input-signal__title">Input Signal</h1>
+
+  <div class="input-signal__c1">
+    <app-input-signal-item
+      [class.input-signal--active]="active == 'step'"
+      (click)="handleClick('step')"
+      [type]="'step'"
+      [active]="active == 'step' ? true : false"
+    ></app-input-signal-item>
+    <app-input-signal-item
+      [class.input-signal--active]="active == 'ramp'"
+      [active]="active == 'ramp' ? true : false"
+      (click)="handleClick('ramp')"
+      [type]="'ramp'"
+    ></app-input-signal-item>
+    <app-input-signal-item
+      [class.input-signal--active]="active == 'sin'"
+      [active]="active == 'sin' ? true : false"
+      (click)="handleClick('sin')"
+      [type]="'sin'"
+    ></app-input-signal-item>
+  </div>
+</div>

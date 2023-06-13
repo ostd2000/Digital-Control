@@ -1,0 +1,15 @@
+@use "../sass/variables" as *;
+
+.input-signal-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+
+  // Since this is an "span" tag, it's got a display of inline which prevents the "width" and "height" properties to take action.
+  // display: block;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: $border-radius-4;
+}

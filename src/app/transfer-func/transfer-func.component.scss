@@ -1,0 +1,18 @@
+@use "../sass/variables" as *;
+
+.transfer-func {
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.5rem;
+
+  background-color: #1e2a33;
+  color: $color-secondary;
+
+  border-radius: $border-radius-4;
+
+  padding: 0 2.5rem;
+}

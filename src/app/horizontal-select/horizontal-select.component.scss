@@ -1,0 +1,53 @@
+@use "../sass/variables" as *;
+
+.horizontal-select {
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  background-color: $color-surface-8;
+  color: $color-typography-38;
+
+  border-radius: $border-radius-8;
+
+  cursor: pointer;
+
+  & > * {
+    height: 3rem;
+
+    padding: 6px 2rem 5px 2rem;
+  }
+
+  &--sm {
+    height: 2.5rem;
+
+    font-size: 1.2rem;
+
+    & > * {
+      height: 2.5rem;
+
+      padding: 5px 1.5rem 5px 1.5rem;
+    }
+  }
+
+  &--active-left,
+  &--active-center,
+  &--active-right {
+    color: #000000;
+    background-color: $color-secondary;
+  }
+
+  &--active-left {
+    border-top-left-radius: $border-radius-8;
+    border-bottom-left-radius: $border-radius-8;
+  }
+
+  &--active-right {
+    border-top-right-radius: $border-radius-8;
+    border-bottom-right-radius: $border-radius-8;
+  }
+}

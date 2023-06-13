@@ -1,0 +1,23 @@
+@use "../sass/variables" as *;
+
+.btn {
+  color: #000000;
+
+  font-size: 1.6rem;
+  font-weight: bold;
+
+  border: none;
+  border-radius: $border-radius-4;
+
+  padding: 1rem 2rem;
+
+  cursor: pointer;
+
+  &--primary {
+    background-color: $color-primary;
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+  }
+}

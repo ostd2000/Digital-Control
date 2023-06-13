@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { GenSysPageComponent } from './gen-sys-page/gen-sys-page.component';
+import { SimPageComponent } from './sim-page/sim-page.component';
+
+const routes: Routes = [
+  { path: '', component: GenSysPageComponent },
+  { path: 'sim', component: SimPageComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

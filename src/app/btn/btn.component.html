@@ -1,0 +1,9 @@
+<button
+  class="btn"
+  [ngStyle]="customStyles"
+  [class.btn--primary]="primary == 'check'"
+  [class.btn--secondary]="secondary == 'check'"
+  (click)="handleClick()"
+>
+  <ng-content></ng-content>
+</button>

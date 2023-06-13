@@ -1,0 +1,36 @@
+@use "../sass/variables" as *;
+
+.input-signal {
+  width: 30rem;
+  height: 22rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $color-surface-5;
+
+  border: 2px solid $color-surface-7;
+  border-radius: $border-radius-8;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+
+    margin-top: 1.5rem;
+  }
+
+  &__c1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    margin-top: 1.5rem;
+  }
+
+  &--active {
+    border-radius: $border-radius-4;
+
+    background-color: $color-surface-7;
+  }
+}

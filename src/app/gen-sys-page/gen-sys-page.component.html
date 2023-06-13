@@ -1,0 +1,32 @@
+<div class="gen-sys-page">
+  <app-popup
+    *ngIf="isSysReady"
+    [customStyles]="{ width: '75%', height: '40rem' }"
+  >
+    <app-sys-rep-popup [ngStyle]="{ width: '100%' }"></app-sys-rep-popup>
+  </app-popup>
+
+  <div class="gen-sys-page__c1">
+    <div class="gen-sys-page__c1-1">
+      <app-input-signal></app-input-signal>
+
+      <app-sampling-time></app-sampling-time>
+    </div>
+
+    <app-sys-spec></app-sys-spec>
+
+    <app-btn (btnClick)="createSys($event)" [primary]="'check'"
+      >Build and Evaluate System</app-btn
+    >
+  </div>
+
+  <app-line
+    class="gen-sys-page__line"
+    [vert]="true"
+    [length]="'68rem'"
+    [color]="'#232323'"
+    [stroke]="'2px'"
+  ></app-line>
+
+  <app-controller></app-controller>
+</div>

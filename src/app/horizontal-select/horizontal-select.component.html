@@ -1,0 +1,43 @@
+<div
+  *ngIf="num == 2"
+  class="horizontal-select"
+  [class.horizontal-select--sm]="sm"
+>
+  <span
+    class="horizontal-select__item1"
+    [class.horizontal-select--active-left]="active2 == 'left'"
+    (click)="handleClick2('left')"
+    >{{ data[0] }}</span
+  >
+  <span
+    class="horizontal-select__item2"
+    [class.horizontal-select--active-right]="active2 == 'right'"
+    (click)="handleClick2('right')"
+    >{{ data[1] }}</span
+  >
+</div>
+
+<div
+  *ngIf="num == 3"
+  class="horizontal-select"
+  [class.horizontal-select--sm]="sm"
+>
+  <span
+    class="horizontal-select__item1"
+    [class.horizontal-select--active-left]="active3 == 'left'"
+    (click)="handleClick3('left')"
+    >{{ data[0] }}</span
+  >
+  <span
+    class="horizontal-select__item2 horizontal-select--active2"
+    [class.horizontal-select--active-center]="active3 == 'center'"
+    (click)="handleClick3('center')"
+    >{{ data[1] }}</span
+  >
+  <span
+    class="horizontal-select__item3"
+    [class.horizontal-select--active-right]="active3 == 'right'"
+    (click)="handleClick3('right')"
+    >{{ data[2] }}</span
+  >
+</div>

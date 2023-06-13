@@ -1,0 +1,13 @@
+<div class="input" [ngStyle]="generalStyles">
+  <label class="input__label" for="input__input" [ngStyle]="labelStyles">
+    <ng-content></ng-content>
+  </label>
+  <input
+    id="input__input"
+    class="input__input"
+    type="text"
+    placeholder="{{ placeHolder }}"
+    (keyup)="handleChange($event)"
+    [ngStyle]="inputStyles"
+  />
+</div>

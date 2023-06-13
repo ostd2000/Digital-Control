@@ -1,0 +1,25 @@
+.arrow {
+  position: absolute;
+  top: -2rem;
+  left: 4rem;
+
+  &__line {
+    width: 4rem;
+    height: 2px;
+
+    position: relative;
+
+    background-color: #2a2a2a;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: -2rem;
+    left: 4rem;
+  }
+
+  //   &__arrow {
+  //     position: relative;
+  //     left: -1.6rem;
+  //   }
+}

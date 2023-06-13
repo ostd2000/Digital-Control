@@ -1,0 +1,31 @@
+@use "../sass/variables" as *;
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  &__label {
+    color: $color-typography-60;
+  }
+
+  &__input {
+    width: 97%;
+    height: 3rem;
+
+    background-color: $color-surface-7;
+    color: $color-white-20;
+
+    font-size: 1.4rem;
+
+    outline: none;
+    border: none;
+    border-radius: $border-radius-8;
+
+    padding: 7px 5px 5px 5px;
+
+    &::placeholder {
+      color: $color-white-20;
+    }
+  }
+}

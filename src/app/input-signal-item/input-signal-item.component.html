@@ -1,0 +1,26 @@
+<div class="input-signal-item">
+  <div class="input-signal-item__c1">
+    <span class="input-signal-item__svg-background">
+      <app-svg
+        class="input-signal-item__step-svg"
+        [title]="type"
+        [dim]="'2.2rem'"
+        [color]="'#2196f3'"
+      ></app-svg>
+    </span>
+
+    <span class="input-signal-item__title">{{ type | titlecase }}</span>
+  </div>
+
+  <span
+    class="input-signal-item__checkbox-outline material-symbols-rounded"
+    *ngIf="!active; else elseBlock"
+  >
+    check_box_outline_blank
+  </span>
+  <ng-template #elseBlock>
+    <span class="input-signal-item__checkbox material-symbols-rounded">
+      check_box
+    </span>
+  </ng-template>
+</div>

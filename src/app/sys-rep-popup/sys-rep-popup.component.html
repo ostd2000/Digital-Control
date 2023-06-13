@@ -1,0 +1,18 @@
+<div class="sys-rep-popup">
+  <span
+    (click)="handleClose()"
+    class="sys-rep-popup__cancel material-symbols-rounded"
+  >
+    cancel
+  </span>
+
+  <app-sys-rep class="sys-rep-popup__sys-rep"></app-sys-rep>
+
+  <app-btn
+    class="sys-rep-popup__btn"
+    [primary]="'check'"
+    [ngStyle]="btnMarginTop"
+    (btnClick)="handleClick()"
+    >Run Simulation</app-btn
+  >
+</div>

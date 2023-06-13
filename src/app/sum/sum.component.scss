@@ -1,0 +1,29 @@
+@use "../sass/variables" as *;
+
+.sum {
+  width: 3.5rem;
+  height: 3.5rem;
+
+  position: relative;
+
+  background-color: #1e2a33;
+  color: $color-secondary;
+
+  border-radius: 50%;
+
+  &__plus {
+    position: absolute;
+    top: 1.2rem;
+    left: 2px;
+
+    font-size: 1rem;
+  }
+
+  &__minus {
+    position: absolute;
+
+    font-size: 1rem;
+    top: 2.5rem;
+    left: 1.2rem;
+  }
+}
