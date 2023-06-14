@@ -26,6 +26,8 @@ import { SysRepPopupComponent } from './sys-rep-popup/sys-rep-popup.component';
 import { CodeEditorComponent } from './code-editor/code-editor.component';
 import { ControllerComponent } from './controller/controller.component';
 import { SimPageComponent } from './sim-page/sim-page.component';
+import { SimulationComponent } from './simulation/simulation.component';
+import { FloatingBtnComponent } from './floating-btn/floating-btn.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { SimPageComponent } from './sim-page/sim-page.component';
     CodeEditorComponent,
     ControllerComponent,
     SimPageComponent,
+    SimulationComponent,
+    FloatingBtnComponent,
   ],
   imports: [
     BrowserModule,

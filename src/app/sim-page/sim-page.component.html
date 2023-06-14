@@ -1,1 +1,53 @@
-<div class="sim-page">Sim page works!</div>
+<div class="sim-page">
+  <app-simulation></app-simulation>
+
+  <div class="sim-page__c1">
+    <app-floating-btn
+      [styles]="
+        activeFloatingBtn == 'none' || activeFloatingBtn == 'zoom-out'
+          ? {
+              backgroundColor: '#131F28',
+              marginRight: '1rem'
+            }
+          : {
+              marginRight: '1rem'
+            }
+      "
+      (click)="handleZoomClick('zoom-in')"
+      [active]="activeFloatingBtn == 'zoom-in' ? true : false"
+    >
+      <span
+        class="sim-page__zoom-in material-symbols-rounded"
+        [class.sim-page__zoom-in--active]="activeFloatingBtn == 'zoom-in'"
+      >
+        zoom_in
+      </span>
+    </app-floating-btn>
+
+    <app-floating-btn
+      [styles]="
+        activeFloatingBtn == 'none' || activeFloatingBtn == 'zoom-in'
+          ? {
+              backgroundColor: '#131F28',
+              marginRight: '3rem'
+            }
+          : {
+              marginRight: '3rem'
+            }
+      "
+      (click)="handleZoomClick('zoom-out')"
+      [active]="activeFloatingBtn == 'zoom-out' ? true : false"
+    >
+      <span
+        class="sim-page__zoom-out material-symbols-rounded"
+        [class.sim-page__zoom-out--active]="activeFloatingBtn == 'zoom-out'"
+      >
+        zoom_out
+      </span>
+    </app-floating-btn>
+
+    <app-floating-btn [styles]="{ backgroundColor: '#1E1E1E' }">
+      <span class="sim-page__close material-symbols-rounded"> close </span>
+    </app-floating-btn>
+  </div>
+</div>
