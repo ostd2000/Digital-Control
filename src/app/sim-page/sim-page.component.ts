@@ -1,4 +1,7 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { SysService } from '../sys.service';
 
 @Component({
   selector: 'app-sim-page',
@@ -7,6 +10,8 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class SimPageComponent {
+  constructor(private router: Router, private sysService: SysService) {}
+
   @Input() activeFloatingBtn: string = 'none';
 
   handleZoomClick(zoomType: string) {
@@ -25,7 +30,12 @@ export class SimPageComponent {
         this.activeFloatingBtn = 'zoom-out';
       }
     }
+  }
 
-    console.log(this.activeFloatingBtn);
+  closeSim(isSimClosed: boolean) {
+    if (isSimClosed) {
+      this.sysService.setSysState(false);
+      this.router.navigate(['']);
+    }
   }
 }

@@ -46,7 +46,10 @@
       </span>
     </app-floating-btn>
 
-    <app-floating-btn [styles]="{ backgroundColor: '#1E1E1E' }">
+    <app-floating-btn
+      (btnClick)="closeSim($event)"
+      [styles]="{ backgroundColor: '#1E1E1E' }"
+    >
       <span class="sim-page__close material-symbols-rounded"> close </span>
     </app-floating-btn>
   </div>

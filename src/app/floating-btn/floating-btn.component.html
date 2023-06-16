@@ -2,6 +2,7 @@
   class="floating-btn"
   [ngStyle]="styles"
   [class.floating-btn--active]="active"
+  (click)="handleClick()"
 >
   <ng-content class="floating-btn__content"></ng-content>
 </button>

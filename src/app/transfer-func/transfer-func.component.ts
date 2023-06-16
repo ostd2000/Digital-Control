@@ -10,7 +10,7 @@ export class TransferFuncComponent {
   @Input() numerator: number[] = [];
   @Input() denominator: number[] = [];
 
-  content: string = '$1 \\over z + 0.5$';
+  content: string = '$1 \\over s + 0.5$';
 
   ngOnInit() {
     this.genContent(this.numerator, this.denominator);
@@ -32,17 +32,17 @@ export class TransferFuncComponent {
       } else {
         if (numerator[i] == 1) {
           if (nLen - i - 1 == 1) {
-            n += `z + `;
+            n += `s + `;
           } else {
-            n += `z^${nLen - i - 1} + `;
+            n += `s^${nLen - i - 1} + `;
           }
         }
 
         if (numerator[i] != 1 && numerator[i] != 0) {
           if (nLen - i - 1 == 1) {
-            n += `${numerator[i]}z +`;
+            n += `${numerator[i]}s +`;
           } else {
-            n += `${numerator[i]}z^${nLen - i - 1} +`;
+            n += `${numerator[i]}s^${nLen - i - 1} +`;
           }
         }
       }
@@ -56,17 +56,17 @@ export class TransferFuncComponent {
       } else {
         if (denominator[i] == 1) {
           if (dLen - i - 1 == 1) {
-            d += `z + `;
+            d += `s + `;
           } else {
-            d += `z^${dLen - i - 1} + `;
+            d += `s^${dLen - i - 1} + `;
           }
         }
 
         if (denominator[i] != 1 && denominator[i] != 0) {
           if (dLen - i - 1 == 1) {
-            d += `${denominator[i]}z +`;
+            d += `${denominator[i]}s +`;
           } else {
-            d += `${denominator[i]}z^${dLen - i - 1} +`;
+            d += `${denominator[i]}s^${dLen - i - 1} +`;
           }
         }
       }
